@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CompassJS</title>
+    <style>
+      body {
+        min-height: 100vh;
+      }
+      #container {
+        position: relative;
+        min-height: 100vh;
+      }
+      #compass {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        max-width: 300px;
+        transform: translate(-50%, -50%);
+        transform-origin: 0 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <img src="./images/compass.png" alt="compass" id="compass" />
+    </div>
+  </body>
+  <script>
+    const compass = document.getElementById("compass");
+    if (window.DeviceOrientationEvent) {
+      window.addEventListener(
+        "deviceorientation",
+        (event) => {
+          const alpha = event.alpha; // alpha: rotation around z-axis
+          compass.style.rotate = `${alpha}deg`;
+        },
+        true
+      );
+    }
+  </script>
+</html>
