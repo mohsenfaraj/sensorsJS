@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sensors API</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        min-height: 100vh;
+        font-size: 30px;
+      }
+      #container {
+        min-height: 100vh;
+        width: 100%;
+        position: relative;
+      }
+      #cross {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+      }
+      #circle {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+      }
+      #textbox {
+        font-size: 14px;
+        padding: 10px;
+        color: #888;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <p id="textbox">info</p>
+      <div id="cross">+</div>
+      <div id="circle">0</div>
+    </div>
+  </body>
+  <script src="./script.js"></script>
+</html>
